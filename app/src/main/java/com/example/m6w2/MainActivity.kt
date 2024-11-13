@@ -22,7 +22,6 @@ sealed class Screen(val route: String) {
     }
 }
 
-// Главный Activity
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -54,7 +53,6 @@ fun OnboardingNavHost(navController: NavHostController) {
     }
 }
 
-// Welcome Screen
 @Composable
 fun WelcomeScreen(onNextClick: () -> Unit) {
     Column(
@@ -69,7 +67,6 @@ fun WelcomeScreen(onNextClick: () -> Unit) {
     }
 }
 
-// Registration Screen
 @Composable
 fun RegistrationScreen(onRegisterClick: (String) -> Unit) {
     var username by remember { mutableStateOf("") }
@@ -90,7 +87,6 @@ fun RegistrationScreen(onRegisterClick: (String) -> Unit) {
     }
 }
 
-// Confirmation Screen
 @Composable
 fun ConfirmationScreen(username: String) {
     Column(
